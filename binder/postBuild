@@ -1,0 +1,13 @@
+#!/bin/bash
+
+/srv/conda/envs/notebook/bin/python -m pip install --upgrade git+https://github.com/TomAugspurger/dask-labextension@pangeo-fixup
+
+jupyter labextension install --clean \
+                            @jupyter-widgets/jupyterlab-manager \
+                            @jupyterlab/geojson-extension \
+                            dask-labextension \
+                            @pyviz/jupyterlab_pyviz \
+                            jupyter-leaflet
+
+#EOF
+
